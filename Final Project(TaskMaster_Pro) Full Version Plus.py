@@ -136,14 +136,21 @@ def open_help_window():
     help_window.geometry("500x300")
     help_label = tk.Label(
         help_window, 
-        text="TaskMaster Pro Help\n\n"
-             "- Add tasks using the input fields.\n"
-             "- Use 'Edit' to update a tasks Name, Date, or Priority.\n"
-             "- Use 'Mark as Complete' to update status.\n"
-             "- Use 'Clear Task' to delete a selected task.\n"
-             "- Use 'Clear All Tasks' to delete all tasks.\n"
-             "- Export tasks to CSV for future use.",
-        font=("Arial", 12), justify="left"
+        text=(
+            "TaskMaster Pro User Manual\n\n"
+            "- Introduction:\n"
+            "  TaskMaster Pro is a user-friendly task management tool designed to help you organize and prioritize your daily tasks.\n\n"
+            "- Getting Started:\n"
+            "  Input Task Name, Due Date (in YYYY-MM-DD format), and click 'Add Task' to save the task.\n\n"
+            "- Features:\n"
+            "  • Edit Tasks: Select a task and click 'Edit' to modify it.\n"
+            "  • Mark as Complete: Select a task and click 'Mark as Complete'.\n"
+            "  • Delete Task: Select a task and click 'Clear Task'.\n"
+            "  • Export to CSV: Save your tasks as a CSV file on the desktop.\n"
+            "  • User Manual & About: Use the respective buttons for guidance or information."
+        ),
+        font=("Arial", 12), 
+        justify="left"
     )
     help_label.pack(pady=10)
 
@@ -204,7 +211,7 @@ export_button.grid(row=0, column=4, padx=5)
 about_button = tk.Button(button_frame, text="About", command=open_about_window)
 about_button.grid(row=0, column=5, padx=5)
 
-help_button = tk.Button(button_frame, text="Help", command=open_help_window)
+help_button = tk.Button(button_frame, text="User Manual", command=open_help_window)
 help_button.grid(row=0, column=6, padx=5)
 
 # Run the application
